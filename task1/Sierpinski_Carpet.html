@@ -12,7 +12,7 @@
         </script>
         <script id="fragment-shader" type="x-shader/x-fragment">
             precision mediump float;
-            uniform vec4 uColor;
+            uniform vec4 uColor;<!--색상정보를 js에서 변경하기 위해 필요한 변수-->
             void
             main(){
                 gl_FragColor = uColor;
@@ -24,8 +24,11 @@
         <script type="text/javascript" src="./Sirepinski_Carpet.js"></script>
     </head>
     <body>
+        <!--색상 변경버튼-->
         <button id="changeColor">랜덤 색상 변경</button>
+        <!--분할 횟수 지정 ui(버튼 + 스핀박스)-->
         <label for="reps">reps</label>
+        <!--디폴트를 3회로 지정, 분할횟수는 1번에서 최대 10번까지 가능-->
         <input type="number" id="reps" min="1" max="10" value="3">
         <button id="applyReps">적용</button>
         <canvas id="gl-canvas" width="512" height="512">rendering failed</canvas>
